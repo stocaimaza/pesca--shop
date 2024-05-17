@@ -17,6 +17,9 @@ app.use(express.urlencoded({extended:true}));
 app.use(cors());
 
 //Rutas
+app.get("/", (req, res) => {
+    res.send("Hola mundo");
+})
 app.use("/api/productos", productosRouter);
 
 
